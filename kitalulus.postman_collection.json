@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "269f0269-4971-4212-a289-de9bc9a44841",
+		"name": "kitalulus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Question",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "67890",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"question\": \"How Are You?\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:12345/question",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "12345",
+					"path": [
+						"question"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Question with pagination",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:12345/question",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "12345",
+					"path": [
+						"question"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show question with uuid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:12345/question/45a146d3-ea19-4b2b-bdff-511d062d33ca",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "12345",
+					"path": [
+						"question",
+						"45a146d3-ea19-4b2b-bdff-511d062d33ca"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Question",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "67890",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "601297c216846b1345793c10",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:12345/question/remove",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "12345",
+					"path": [
+						"question",
+						"remove"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Question",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "12345",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "question",
+							"value": "update question",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:12345/question/update/6012a70c41b0a9b72b3bcdfc",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "12345",
+					"path": [
+						"question",
+						"update",
+						"6012a70c41b0a9b72b3bcdfc"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

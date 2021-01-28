@@ -1,0 +1,15 @@
+[{
+  "_id": {
+    "$oid": "60127bc94c801a6cb33630f9"
+  },
+  "name": "user 1",
+  "apiToken": "12345",
+  "locale": "en"
+},{
+  "_id": {
+    "$oid": "60127bf24c801a6cb33630fa"
+  },
+  "name": "user 2",
+  "apiToken": "67890",
+  "locale": "cn"
+}]
